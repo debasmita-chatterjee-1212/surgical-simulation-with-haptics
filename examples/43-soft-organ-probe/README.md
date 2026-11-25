@@ -52,6 +52,69 @@ response governed by the tensor-mass model.
 - Mesh-edge visualization.
 - Tissue-specific force limits.
 
+## Visual Demonstrations
+
+### Anatomical Models
+
+| Ear cartilage | Left kidney |
+| :---: | :---: |
+| ![Ear cartilage](../../assets/screenshots/cartilage_probe.png) | ![Kidney](../../assets/screenshots/kidney_probe_02.png) |
+| E = 1.66 MPa | E = 19.6 kPa |
+| **Liver** | **Pancreas** |
+| ![Liver](../../assets/screenshots/liver_probe_loaded.png) | ![Pancreas](../../assets/screenshots/pancreas_probe.png) |
+| E = 15 kPa | E = 1.4 kPa |
+
+### Interactive Tissue Deformation
+
+| Ear cartilage | Left kidney |
+| :---: | :---: |
+| ![Cartilage deformation](../../assets/gifs/cartilage_probe.gif) | ![Kidney deformation](../../assets/gifs/kidney_probe.gif) |
+| **Liver** | **Pancreas** |
+| ![Liver deformation](../../assets/gifs/liver_probe.gif) | ![Pancreas deformation](../../assets/gifs/pancreas_probe.gif) |
+
+The demonstrations illustrate interactive instrument
+contact and deformation across anatomical models with
+different assigned material properties.
+
+### Loaded and Unloaded Configurations
+
+| Unloaded liver | Loaded liver |
+| :---: | :---: |
+| ![Unloaded liver](../../assets/screenshots/liver_probe_unloaded.png) | ![Loaded liver](../../assets/screenshots/liver_probe_loaded.png) |
+| Force: 0.00 N | Force: 2.17 N |
+| Displacement: 0.00 mm | Displacement: 23.41 mm |
+
+### Kidney Interaction at Different Loads
+
+| Lower applied load | Higher applied load |
+| :---: | :---: |
+| ![Kidney lower load](../../assets/screenshots/kidney_probe_01.png) | ![Kidney higher load](../../assets/screenshots/kidney_probe_02.png) |
+| Force: 0.40 N | Force: 1.11 N |
+| Displacement: 2.88 mm | Displacement: 6.40 mm |
+
+### Representative Simulation Outputs
+
+| Tissue | Young's modulus | Contact force | Maximum displacement |
+|---|---:|---:|---:|
+| Ear cartilage | 1.66 MPa | 1.41 N | 0.17 mm |
+| Kidney | 19.6 kPa | 1.11 N | 6.40 mm |
+| Liver | 15 kPa | 2.17 N | 23.41 mm |
+| Pancreas | 1.4 kPa | 0.05 N | 3.36 mm |
+
+These values are individual observations recorded
+during interactive simulation.
+
+They are not controlled comparative measurements:
+applied loads, contact locations, anatomical geometry
+and boundary conditions differ between demonstrations.
+
+Large displacement observations should also be
+interpreted with caution given the underlying
+small-strain linear-elastic formulation.
+
+For quantitative assessment of the mechanical model,
+refer to the [Numerical Verification](../../validation/README.md).
+
 ## Implementation
 
 | File | Responsibility |
