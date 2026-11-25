@@ -1,0 +1,16 @@
+# build output
+build/
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.o
+*.lib
+# editor / OS
+.vs/
+.vscode/
+Thumbs.db
+*.bak
+*.bak2
+# local outputs
+validation_output.txt

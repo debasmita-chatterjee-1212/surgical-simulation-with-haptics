@@ -1,0 +1,52 @@
+Validation of the tensor-mass solver and the proxy contact against analytical solutions
+
+TEST 1  uniaxial compression of a clamped bar (L = 60 mm, 20 x 20 mm, E = 15 kPa)
+  nu    cell h [mm]   tets     FEM [mm]   analytic [mm]   error [%]
+  0.30      10.0       144     0.9803        1.0000       -1.97
+  0.30       5.0      1152     0.9849        1.0000       -1.51
+  0.30       4.0      2250     0.9860        1.0000       -1.40
+  0.30       2.5      9216     0.9877        1.0000       -1.23
+  0.45      10.0       144     0.9287        1.0000       -7.13
+  0.45       5.0      1152     0.9502        1.0000       -4.98
+  0.45       4.0      2250     0.9556        1.0000       -4.44
+  0.45       2.5      9216     0.9641        1.0000       -3.59
+
+TEST 2  cantilever beam, tip load (L = 100 mm, 20 x 20 mm, E = 15 kPa), Timoshenko beam theory
+  nu    cell h [mm]   tets     FEM [mm]   analytic [mm]   error [%]
+  0.30      10.0       240     1.0450        2.0624      -49.33
+  0.30       5.0      1920     1.6127        2.0624      -21.80
+  0.30       4.0      3750     1.7370        2.0624      -15.78
+  0.30       2.5     15360     1.9021        2.0624       -7.77
+  0.45      10.0       240     0.6332        2.0696      -69.40
+  0.45       5.0      1920     1.2169        2.0696      -41.20
+  0.45       4.0      3750     1.3980        2.0696      -32.45
+  0.45       2.5     15360     1.6929        2.0696      -18.20
+
+TEST 3  half-space indented by the proxy's load patch applied directly (F = 0.3 N, patch radius rho = 10 mm)
+  analytic: w0 = 4 F (1 - nu^2) / (pi E rho)   [pressure p ~ (1 - r/rho)^2 on an elastic half-space, centre displacement]
+  nu    cell h [mm]   tets     FEM [mm]   analytic [mm]   error [%]
+  0.30       8.0      3000     1.9113        2.3173      -17.52
+  0.30       6.0      8232     2.0052        2.3173      -13.47
+  0.30       5.0     12288     2.0145        2.3173      -13.07
+  0.30       4.0     24000     2.0425        2.3173      -11.86
+  0.45       8.0      3000     1.5188        2.0308      -25.21
+  0.45       6.0      8232     1.6146        2.0308      -20.50
+  0.45       5.0     12288     1.6306        2.0308      -19.71
+  0.45       4.0     24000     1.6662        2.0308      -17.95
+
+TEST 4  proxy contact on the same block: force-indentation consistency (E = 15 kPa)
+  (the contact force is the hand-proxy spring, so this tests the whole contact loop, not only the solid)
+  nu    cell h [mm]  tets    rho [mm]  hand depth   F [N]   FEM dent [mm]  analytic [mm]  err [%]  tissue max disp [mm]  err [%]  state
+  0.45      8.0      3000    10.93       1.0 mm   0.272         0.661          1.682      -60.7         1.305      -22.4  static
+  0.45      8.0      3000    10.93       2.0 mm   0.386         1.492          2.391      -37.6         1.894      -20.8  UNSTEADY (not a valid comparison)
+  0.45      5.0     12288     6.83       1.0 mm   0.150         0.802          1.485      -46.0         1.225      -17.5  UNSTEADY (not a valid comparison)
+  0.45      5.0     12288     6.83       2.0 mm   0.302         1.608          2.998      -46.4         2.380      -20.6  static
+
+HOW TO READ THE RESULTS
+  Test 1: solver reproduces the modulus E (error is the end-clamp effect and, for nu = 0.45, volumetric locking of linear tetrahedra).
+  Test 2: constant-strain tetrahedra are too stiff in bending on coarse meshes (shear locking); the error falls as the mesh is refined.
+  Test 3: tissue response to the proxy load patch approaches the half-space solution as the mesh is refined (a finite 40 mm block adds ~10 % stiffness).
+  Test 4: the contact loop is not static at larger depths: the proxy tip does not follow the deepest point of the dimple (contact on/off cycling).
+          Use the tissue max displacement column for the tissue response and report the contact loop as a qualitative interaction model.
+
+Results also written to validation_results.csv
