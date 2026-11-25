@@ -61,6 +61,16 @@ The application investigates contact-force estimation
 and analytical indentation without explicitly integrating
 the deformation of highly stiff bone.
 
+<p align="center">
+  <img src="assets/gifs/bone_probe_02.gif" width="85%"
+       alt="Rigid temporal bone interaction">
+</p>
+
+<p align="center">
+  <em>Interactive temporal bone probing using a rigid
+  anatomical representation.</em>
+</p>
+
 **Features**
 
 - Voxel-based anatomical representation.
@@ -80,6 +90,16 @@ The virtual proxy couples instrument motion to
 distributed tissue loading, producing a mechanically
 computed deformation response.
 
+<p align="center">
+  <img src="assets/gifs/liver_probe.gif" width="85%"
+       alt="Tensor-mass liver deformation">
+</p>
+
+<p align="center">
+  <em>Interactive liver deformation using the tensor-mass
+  formulation and proxy-based instrument contact.</em>
+</p>
+
 **Features**
 
 - Multiple anatomical tissue models.
@@ -98,6 +118,16 @@ for investigating surgical surface incision.
 The application combines tissue deformation with
 fracture-energy-based cutting-force estimation
 and surface-anchored incision geometry.
+
+<p align="center">
+  <img src="assets/gifs/liver_scalpel.gif" width="85%"
+       alt="Liver surface incision simulation">
+</p>
+
+<p align="center">
+  <em>Surface incision modelling with fracture-energy-based
+  force estimation and deformation-dependent incision geometry.</em>
+</p>
 
 **Features**
 
