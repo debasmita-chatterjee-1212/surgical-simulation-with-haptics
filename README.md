@@ -20,12 +20,6 @@ Built on [CHAI3D](https://www.chai3d.org/) for Windows (Visual Studio, CMake, GL
 Keys (43 and 44): `1-4` organ, mouse moves the instrument, arrows or scroll set depth, `[` `]` softer or stiffer tissue, `r` reset, `e` edges, `f` full screen, `q` quit.
 In 44: `t` switches probe and scalpel, hold `SPACE` while pressing in to cut, `c` clears cuts.
 
-## Validation
-`validation/validation.cpp` (build: `cl /O2 /EHsc /std:c++17 validation.cpp`) runs four tests; results are in `validation/example_output_from_my_run.txt` and `validation/validation_results.csv`.
-Summary at the finest mesh: bar in compression -1.2 % (nu 0.30) and -3.6 % (nu 0.45); cantilever -7.8 % and -18.2 %; half-space under the proxy load patch -11.9 % and -18.0 %.
-The model is stiffer than theory on coarse meshes (locking of linear tetrahedra) and converges with refinement. The force readout of the contact loop is qualitative.
-Figures: `python validation/figures/make_plots.py validation/figures/validation_results.csv` (needs Python and matplotlib).
-
 ## Material values
 See [docs/MATERIALS.md](docs/MATERIALS.md). Each value is marked cited, checked or assumed; densities, the ear Poisson ratio and the bone Poisson ratio and density are assumed.
 
