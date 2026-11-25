@@ -1,6 +1,6 @@
 # Haptic surgical simulation in CHAI3D
 
-Touch and cut virtual tissue with a mouse or touchpad (no haptic device needed) while force and deformation are shown on screen.
+Touch and cut virtual tissue with a mouse or touchpad or the Phantom Omni haptic device while force and deformation are shown on screen.
 Built on [CHAI3D](https://www.chai3d.org/) for Windows (Visual Studio, CMake, GLFW examples).
 
 | Example | What it does |
