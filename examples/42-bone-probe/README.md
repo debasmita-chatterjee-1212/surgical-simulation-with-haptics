@@ -31,6 +31,40 @@ localized contact deformation is estimated analytically.
 - Continuous CSV logging of interaction measurements.
 - Distinction between free motion and surface contact.
 
+## Visual Demonstrations
+
+### Anatomical Visualization
+
+| Anatomical view 1 | Anatomical view 2 |
+| :---: | :---: |
+| ![Temporal bone view 1](../../assets/screenshots/bone_probe_01.png) | ![Temporal bone view 2](../../assets/screenshots/bone_probe_02.png) |
+
+Alternative viewing perspectives of the voxel-derived
+temporal bone surface.
+
+### Interactive Instrument Probing
+
+<p align="center">
+  <img src="../../assets/gifs/bone_probe_01.gif" width="85%">
+</p>
+
+<p align="center">
+  <em>Interactive probe movement and anatomical contact.</em>
+</p>
+
+<p align="center">
+  <img src="../../assets/gifs/bone_probe_02.gif" width="85%">
+</p>
+
+<p align="center">
+  <em>Instrument interaction with contact-force and
+  analytical indentation readouts.</em>
+</p>
+
+The displayed forces and indentation values are
+computational estimates rather than physical
+measurements from a haptic device.
+
 ## Implementation
 
 | File | Responsibility |
