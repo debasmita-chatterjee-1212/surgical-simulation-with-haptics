@@ -3,7 +3,7 @@
 Touch and cut virtual tissue with a mouse or touchpad or the Phantom Omni haptic device while force and deformation are shown on screen.
 Built on [CHAI3D](https://www.chai3d.org/) for Windows (Visual Studio, CMake, GLFW examples).
 
-| Example | What it does |
+| Code | What it does |
 | --- | --- |
 | `examples/42-bone-probe` | Rigid left temporal bone (BodyParts3D, 0.5 mm voxels); probe with continuous force and Hertz indentation readout |
 | `examples/43-soft-organ-probe` | Liver, ear cartilage, left kidney, pancreas as deformable tetrahedral meshes; probe with force and maximum tissue displacement |
@@ -31,6 +31,6 @@ See [docs/MATERIALS.md](docs/MATERIALS.md). Each value is marked cited, checked 
 
 ## Data and licences
 - Liver, kidney, pancreas and temporal bone geometry: [BodyParts3D](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html), (c) The Database Center for Life Science, CC Attribution 4.0 International. The mesh headers and voxel files in this repository are derived from it.
-- Ear geometry: NIH 3D model; check its licence before making this repository public.
+- Ear geometry: NIH 3D model.
 - CHAI3D is not included and has its own licence.
-- This repository has no licence file yet: add one before sharing the code.
+- This repository has no licence file yet.
