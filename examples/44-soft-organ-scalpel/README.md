@@ -82,6 +82,65 @@ calibrated tissue properties.
 - Reduced force limits when crossing existing incisions.
 - Tissue-specific force limits.
 
+## Visual Demonstrations
+
+### Surface Incision Across Anatomical Models
+
+| Ear cartilage | Left kidney |
+| :---: | :---: |
+| ![Cartilage incision](../../assets/screenshots/cartilage_scalpel.png) | ![Kidney incision](../../assets/screenshots/kidney_scalpel.png) |
+| **Liver** | **Pancreas** |
+| ![Liver incision](../../assets/screenshots/liver_scalpel.png) | ![Pancreas incision](../../assets/screenshots/pancreas_scalpel_01.png) |
+
+The incision geometry is anchored to the tissue
+surface and follows its deformation during
+instrument interaction.
+
+### Interactive Scalpel Demonstrations
+
+#### Liver
+
+<p align="center">
+  <img src="../../assets/gifs/liver_scalpel.gif" width="85%">
+</p>
+
+#### Kidney
+
+<p align="center">
+  <img src="../../assets/gifs/kidney_scalpel.gif" width="85%">
+</p>
+
+#### Pancreas
+
+<p align="center">
+  <img src="../../assets/gifs/pancreas_scalpel.gif" width="85%">
+</p>
+
+### Incision Geometry
+
+| Pancreas incision example 1 | Pancreas incision example 2 |
+| :---: | :---: |
+| ![Incision example 1](../../assets/screenshots/pancreas_scalpel_01.png) | ![Incision example 2](../../assets/screenshots/pancreas_scalpel_02.png) |
+| Accumulated length: 39 mm | Accumulated length: 22 mm |
+
+### Representative Simulation Outputs
+
+| Tissue | Displayed force | Maximum displacement | Accumulated incision length |
+|---|---:|---:|---:|
+| Ear cartilage | 1.80 N | 0.10 mm | 35 mm |
+| Kidney | 0.70 N | 4.45 mm | 57 mm |
+| Liver | 1.65 N | 15.14 mm | 77 mm |
+| Pancreas | 0.06 N | 3.85 mm | 39 mm |
+
+The displayed values correspond to individual
+simulation snapshots following incision.
+
+They do not represent experimentally validated
+cutting forces or standardized tissue fracture tests.
+
+The incision model does not separate the underlying
+volumetric mesh or simulate physical crack opening.
+
 ## Implementation
 
 | File | Responsibility |
